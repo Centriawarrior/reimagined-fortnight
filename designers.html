@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harjoitustyö</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\fonts.css" />
+
+    <!-- Inline Styles -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+
+      /* Image styling for hover effects */
+      .ht-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .ht-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="ht-sidebar ht-dark-grey ht-collapse ht-top ht-large ht-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <!-- Close menu button for smaller screens -->
+      <a
+        href="javascript:void(0)"
+        onclick="ht_close()"
+        class="ht-button ht-hide-large ht-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="ht-container">
+        <h3 class="ht-padding-64">
+          <b>Company<br />Name</b>
+        </h3>
+      </div>
+      <div class="ht-bar-block">
+        <!-- Navigation links -->
+        <a href="index.html" class="ht-bar-item ht-button ht-hover-white"
+          >Home</a
+        >
+        <a href="showcase.html" class="ht-bar-item ht-button ht-hover-white"
+          >Showcase</a
+        >
+        <a href="services.html" class="ht-bar-item ht-button ht-hover-white"
+          >Services</a
+        >
+        <a href="designers.html" class="ht-bar-item ht-button ht-hover-white"
+          >Designers</a
+        >
+        <a href="packages.html" class="ht-bar-item ht-button ht-hover-white"
+          >Packages</a
+        >
+        <a href="contact.html" class="ht-bar-item ht-button ht-hover-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu for small screens -->
+    <header
+      class="ht-container ht-top ht-hide-large ht-dark-grey ht-xlarge ht-padding"
+    >
+      <!-- Sidebar open button -->
+      <a
+        href="javascript:void(0)"
+        class="ht-button ht-dark-grey ht-margin-right"
+        onclick="ht_open()"
+        >☰</a
+      >
+      <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect for small screens when sidebar is open -->
+    <div
+      class="ht-overlay ht-hide-large"
+      onclick="ht_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Page content -->
+    <div class="ht-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header section -->
+      <div class="ht-container" style="margin-top: 80px" id="showcase">
+        <h1 class="ht-jumbo"><b>Company's Designers</b></h1>
+      </div>
+
+      <!-- Designers section -->
+      <div class="ht-container" id="designers" style="margin-top: 75px">
+        <hr
+          style="width: 50px; border: 5px solid rgb(48, 66, 43)"
+          class="ht-round"
+        />
+        <p>The best team in the world.</p>
+        <p>
+          We are lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p><b>Our designers are thoughtfully chosen</b>:</p>
+      </div>
+
+      <!-- Team showcase -->
+      <div class="ht-row-padding ht-grayscale">
+        <!-- Team Member 1 -->
+        <div class="ht-col m4 ht-margin-bottom">
+          <div class="ht-light-grey">
+            <img src="assets\images\fekku.png" alt="John" style="width: 100%" />
+            <div class="ht-container">
+              <h3>John Doe</h3>
+              <p class="ht-opacity">CEO & Founder</p>
+              <p>
+                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+                sodales pellentesque elementum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="ht-col m4 ht-margin-bottom">
+          <div class="ht-light-grey">
+            <img src="assets\images\piki.webp" alt="Jane" style="width: 100%" />
+            <div class="ht-container">
+              <h3>Jane Doe</h3>
+              <p class="ht-opacity">Designer</p>
+              <p>
+                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+                sodales pellentesque elementum.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="ht-col m4 ht-margin-bottom">
+          <div class="ht-light-grey">
+            <img
+              src="assets\images\zetor.webp"
+              alt="Mike"
+              style="width: 100%"
+            />
+            <div class="ht-container">
+              <h3>Mike Ross</h3>
+              <p class="ht-opacity">Architect</p>
+              <p>
+                Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse
+                sodales pellentesque elementum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="ht-light-grey ht-container ht-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="ht-right">
+        Copyright © 2024 Company. Powered by
+        <a
+          href="https://www.company.com/htcss/default.css"
+          title="oula.css"
+          target="_blank"
+          class="ht-hover-opacity"
+          >oula.css</a
+        >
+      </p>
+    </div>
+
+    <!-- JavaScript for sidebar and modal functionality -->
+    <script>
+      // Open sidebar
+      function ht_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      // Close sidebar
+      function ht_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal image gallery functionality (if used)
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
+</html>

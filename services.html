@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harjoitustyö</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\fonts.css" />
+
+    <!-- Inline Styles -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .ht-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .ht-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu -->
+    <nav
+      class="ht-sidebar ht-dark-grey ht-collapse ht-top ht-large ht-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <!-- Close button for small screens -->
+      <a
+        href="javascript:void(0)"
+        onclick="ht_close()"
+        class="ht-button ht-hide-large ht-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <!-- Sidebar Header -->
+      <div class="ht-container">
+        <h3 class="ht-padding-64">
+          <b>Company<br />Name</b>
+        </h3>
+      </div>
+      <!-- Sidebar Links -->
+      <div class="ht-bar-block">
+        <a href="index.html" class="ht-bar-item ht-button ht-hover-white"
+          >Home</a
+        >
+        <a href="showcase.html" class="ht-bar-item ht-button ht-hover-white"
+          >Showcase</a
+        >
+        <a href="services.html" class="ht-bar-item ht-button ht-hover-white"
+          >Services</a
+        >
+        <a href="designers.html" class="ht-bar-item ht-button ht-hover-white"
+          >Designers</a
+        >
+        <a href="packages.html" class="ht-bar-item ht-button ht-hover-white"
+          >Packages</a
+        >
+        <a href="contact.html" class="ht-bar-item ht-button ht-hover-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="ht-container ht-top ht-hide-large ht-dark-grey ht-xlarge ht-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="ht-button ht-dark-grey ht-margin-right"
+        onclick="ht_open()"
+        >☰</a
+      >
+      <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="ht-overlay ht-hide-large"
+      onclick="ht_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main Page Content -->
+    <div class="ht-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header Section -->
+      <div class="ht-container" style="margin-top: 80px" id="showcase">
+        <h1 class="ht-jumbo"><b>Company's Possible Services</b></h1>
+        <hr
+          style="width: 50px; border: 5px solid rgb(48, 66, 43)"
+          class="ht-round"
+        />
+        <p>
+          <b
+            >We are an interior design service that focuses on what's best for
+            your home and what's best for you!</b
+          >
+        </p>
+        <p>
+          <b>Some text about our services - what we do and what we offer.</b>
+          lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat.
+        </p>
+
+        <!-- Unordered List of Services -->
+        <ul>
+          <li>Custom Interior Design</li>
+          <li>Furniture Selection and Arrangement</li>
+          <li>Space Planning and Layout Optimization</li>
+          <li>Color Consultation and Design Schemes</li>
+          <li>Lighting Design and Installation</li>
+          <li>Home Renovation and Remodeling</li>
+          <li>3D Visualization and Virtual Tours</li>
+          <li>Textile and Material Sourcing</li>
+          <li>Project Management and Coordination</li>
+          <li>Personalized Home Styling</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div
+      class="ht-light-grey ht-container ht-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="ht-right">
+        Copyright © 2024 Company. Powered by
+        <a
+          href="https://www.company.com/htcss/default.css"
+          title="oula.css"
+          target="_blank"
+          class="ht-hover-opacity"
+          >oula.css</a
+        >
+      </p>
+    </div>
+
+    <!-- JavaScript Functions -->
+    <script>
+      // Script to open and close sidebar
+      function ht_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function ht_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery (Note: No modal used in this file yet)
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harjoitustyö</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\fonts.css" />
+    <!-- Internal CSS Styles -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .ht-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .ht-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/Menu Section -->
+    <nav
+      class="ht-sidebar ht-dark-grey ht-collapse ht-top ht-large ht-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <!-- Close Button for Small Screens -->
+      <a
+        href="javascript:void(0)"
+        onclick="ht_close()"
+        class="ht-button ht-hide-large ht-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <!-- Sidebar Content -->
+      <div class="ht-container">
+        <h3 class="ht-padding-64">
+          <b>Company<br />Name</b>
+        </h3>
+      </div>
+      <!-- Navigation Links -->
+      <div class="ht-bar-block">
+        <a href="index.html" class="ht-bar-item ht-button ht-hover-white"
+          >Home</a
+        >
+        <a href="showcase.html" class="ht-bar-item ht-button ht-hover-white"
+          >Showcase</a
+        >
+        <a href="services.html" class="ht-bar-item ht-button ht-hover-white"
+          >Services</a
+        >
+        <a href="designers.html" class="ht-bar-item ht-button ht-hover-white"
+          >Designers</a
+        >
+        <a href="packages.html" class="ht-bar-item ht-button ht-hover-white"
+          >Packages</a
+        >
+        <a href="contact.html" class="ht-bar-item ht-button ht-hover-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top Menu for Small Screens -->
+    <header
+      class="ht-container ht-top ht-hide-large ht-dark-grey ht-xlarge ht-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="ht-button ht-dark-grey ht-margin-right"
+        onclick="ht_open()"
+        >☰</a
+      >
+      <span>Company Name</span>
+    </header>
+
+    <!-- Overlay Effect for Sidebar on Small Screens -->
+    <div
+      class="ht-overlay ht-hide-large"
+      onclick="ht_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main Page Content -->
+    <div class="ht-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header Section -->
+      <div class="ht-container" style="margin-top: 80px" id="showcase">
+        <h1 class="ht-jumbo"><b>Company's Contact Form</b></h1>
+      </div>
+
+      <!-- Contact Form Section -->
+      <div class="ht-container" id="contact" style="margin-top: 75px">
+        <hr
+          style="width: 50px; border: 5px solid rgb(48, 66, 43)"
+          class="ht-round"
+        />
+        <p>
+          Do you want to know more? Fill out the form and share the details with
+          us :) We love meeting new people! Lorem ipsum dolor sit amet
+          consectetur, adipisicing elit. Accusantium cum obcaecati voluptates
+          quidem doloremque. Harum quae modi perspiciatis excepturi, magni
+          facere. Repellat soluta alias dolorum totam minus, blanditiis autem
+          quod!
+        </p>
+        <!-- Contact Form -->
+        <form
+          action="/action_page"
+          target="_blank"
+          enctype="multipart/form-data"
+        >
+          <!-- Name Input -->
+          <div class="ht-section">
+            <label>Name</label>
+            <input
+              class="ht-input ht-border"
+              type="text"
+              name="Name"
+              required
+            />
+          </div>
+
+          <!-- Email Input -->
+          <div class="ht-section">
+            <label>Email</label>
+            <input
+              class="ht-input ht-border"
+              type="email"
+              name="Email"
+              required
+            />
+          </div>
+
+          <!-- Message Input -->
+          <div class="ht-section">
+            <label>Message</label>
+            <textarea
+              class="ht-input ht-border"
+              name="Message"
+              required
+            ></textarea>
+          </div>
+
+          <!-- File Upload -->
+          <div class="ht-section">
+            <label for="file-upload">Attach File (Optional)</label>
+            <input
+              type="file"
+              id="file-upload"
+              name="file-upload"
+              class="ht-input ht-border"
+              accept=".pdf, .doc, .docx, .jpg, .jpeg, .png"
+            />
+          </div>
+
+          <!-- Submit Button -->
+          <button
+            type="submit"
+            class="ht-button ht-block ht-padding-large ht-red ht-margin-bottom"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- End of Page Content -->
+    </div>
+
+    <!-- Footer Section -->
+    <div
+      class="ht-light-grey ht-container ht-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="ht-right">
+        Copyright © 2024 Company. Powered by
+        <a
+          href="https://www.company.com/htcss/default.css"
+          title="oula.css"
+          target="_blank"
+          class="ht-hover-opacity"
+          >oula.css</a
+        >
+      </p>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script>
+      // Script to open and close sidebar
+      function ht_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function ht_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery Functionality
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
+</html>

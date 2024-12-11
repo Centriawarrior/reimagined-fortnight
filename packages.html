@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harjoitustyö</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\fonts.css" />
+
+    <!-- Inline Styles -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+
+      /* Styling for images in ht-half class */
+      .ht-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .ht-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu navigation -->
+    <nav
+      class="ht-sidebar ht-dark-grey ht-collapse ht-top ht-large ht-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <!-- Close menu button for small screens -->
+      <a
+        href="javascript:void(0)"
+        onclick="ht_close()"
+        class="ht-button ht-hide-large ht-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <!-- Sidebar header -->
+      <div class="ht-container">
+        <h3 class="ht-padding-64">
+          <b>Company<br />Name</b>
+        </h3>
+      </div>
+      <!-- Navigation links -->
+      <div class="ht-bar-block">
+        <a href="index.html" class="ht-bar-item ht-button ht-hover-white"
+          >Home</a
+        >
+        <a href="showcase.html" class="ht-bar-item ht-button ht-hover-white"
+          >Showcase</a
+        >
+        <a href="services.html" class="ht-bar-item ht-button ht-hover-white"
+          >Services</a
+        >
+        <a href="designers.html" class="ht-bar-item ht-button ht-hover-white"
+          >Designers</a
+        >
+        <a href="packages.html" class="ht-bar-item ht-button ht-hover-white"
+          >Packages</a
+        >
+        <a href="contact.html" class="ht-bar-item ht-button ht-hover-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu for small screens -->
+    <header
+      class="ht-container ht-top ht-hide-large ht-dark-grey ht-xlarge ht-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="ht-button ht-dark-grey ht-margin-right"
+        onclick="ht_open()"
+        >☰</a
+      >
+      <span>Company Name</span>
+    </header>
+
+    <!-- Overlay effect when sidebar is open on small screens -->
+    <div
+      class="ht-overlay ht-hide-large"
+      onclick="ht_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main page content -->
+    <div class="ht-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header section -->
+      <div class="ht-container" style="margin-top: 80px" id="showcase">
+        <h1 class="ht-jumbo"><b>Available packages:</b></h1>
+      </div>
+
+      <!-- Packages section -->
+      <div class="ht-container" id="packages" style="margin-top: 75px">
+        <hr
+          style="width: 50px; border: 5px solid rgb(48, 66, 43)"
+          class="ht-round"
+        />
+        <p>
+          <b
+            >Here is few examples about our package prices and what you can
+            get</b
+          >. Lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure.
+        </p>
+      </div>
+
+      <!-- Pricing tables -->
+      <div class="ht-row-padding">
+        <!-- Basic Package -->
+        <div class="ht-half ht-margin-bottom">
+          <ul class="ht-ul ht-light-grey ht-center">
+            <li class="ht-dark-grey ht-xlarge ht-padding-32">Basic</li>
+            <li class="ht-padding-16">Floorplanning</li>
+            <li class="ht-padding-16">10 hours support</li>
+            <li class="ht-padding-16">Photography</li>
+            <li class="ht-padding-16">20% furniture discount</li>
+            <li class="ht-padding-16">Good deals</li>
+            <li class="ht-padding-16">
+              <h2>$199</h2>
+              <span class="ht-opacity">per room</span>
+            </li>
+            <li class="ht-light-grey ht-padding-24">
+              <button
+                class="ht-button ht-white ht-padding-large ht-hover-black"
+              >
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pro Package -->
+        <div class="ht-half">
+          <ul class="ht-ul ht-light-grey ht-center">
+            <li class="ht-red ht-xlarge ht-padding-32">Pro</li>
+            <li class="ht-padding-16">Floorplanning</li>
+            <li class="ht-padding-16">50 hours support</li>
+            <li class="ht-padding-16">Photography</li>
+            <li class="ht-padding-16">50% furniture discount</li>
+            <li class="ht-padding-16">GREAT deals</li>
+            <li class="ht-padding-16">
+              <h2>$249</h2>
+              <span class="ht-opacity">per room</span>
+            </li>
+            <li class="ht-light-grey ht-padding-24">
+              <button class="ht-button ht-red ht-padding-large ht-hover-black">
+                Sign Up
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Call-to-Action Section -->
+      <div class="ht-container ht-padding-32" style="margin-top: 50px">
+        <h2>Lorem ipsum, dolor sit amet consectetur</h2>
+        <p>
+          <b
+            >If you did not find a perfect package or want to ask about prices,
+            you can contact us by clicking the button below.</b
+          >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem
+          corrupti, eius neque sit, mollitia quidem aspernatur laboriosam
+          pariatur doloremque quaerat et odio sapiente repudiandae minima, enim
+          officiis. Eum, velit non.
+        </p>
+        <a href="contact.html" class="ht-button ht-light-grey ht-large"
+          >Contact us!</a
+        >
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="ht-light-grey ht-container ht-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="ht-right">
+        Copyright © 2024 Company. Powered by
+        <a
+          href="https://www.company.com/htcss/default.css"
+          title="oula.css"
+          target="_blank"
+          class="ht-hover-opacity"
+          >oula.css</a
+        >
+      </p>
+    </div>
+
+    <!-- JavaScript for sidebar functionality -->
+    <script>
+      // Open the sidebar
+      function ht_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      // Close the sidebar
+      function ht_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery (if applicable)
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
+</html>

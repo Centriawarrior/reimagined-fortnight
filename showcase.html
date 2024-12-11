@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Harjoitustyö</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Link to CSS files -->
+    <link rel="stylesheet" href="assets\css\styles.css" />
+    <link rel="stylesheet" href="assets\css\fonts.css" />
+
+    <!-- Inline Styles -->
+    <style>
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        font-size: 16px;
+      }
+      .ht-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      .ht-half img:hover {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Sidebar/menu navigation -->
+    <nav
+      class="ht-sidebar ht-dark-grey ht-collapse ht-top ht-large ht-padding"
+      style="z-index: 3; width: 300px; font-weight: bold"
+      id="mySidebar"
+    >
+      <br />
+      <a
+        href="javascript:void(0)"
+        onclick="ht_close()"
+        class="ht-button ht-hide-large ht-display-topleft"
+        style="width: 100%; font-size: 22px"
+        >Close Menu</a
+      >
+      <div class="ht-container">
+        <h3 class="ht-padding-64">
+          <b>Company<br />Name</b>
+        </h3>
+      </div>
+      <div class="ht-bar-block">
+        <!-- Navigation links -->
+        <a href="index.html" class="ht-bar-item ht-button ht-hover-white"
+          >Home</a
+        >
+        <a href="showcase.html" class="ht-bar-item ht-button ht-hover-white"
+          >Showcase</a
+        >
+        <a href="services.html" class="ht-bar-item ht-button ht-hover-white"
+          >Services</a
+        >
+        <a href="designers.html" class="ht-bar-item ht-button ht-hover-white"
+          >Designers</a
+        >
+        <a href="packages.html" class="ht-bar-item ht-button ht-hover-white"
+          >Packages</a
+        >
+        <a href="contact.html" class="ht-bar-item ht-button ht-hover-white"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header
+      class="ht-container ht-top ht-hide-large ht-dark-grey ht-xlarge ht-padding"
+    >
+      <a
+        href="javascript:void(0)"
+        class="ht-button ht-dark-grey ht-margin-right"
+        onclick="ht_open()"
+        >☰</a
+      >
+      <span>Oula's Company</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div
+      class="ht-overlay ht-hide-large"
+      onclick="ht_close()"
+      style="cursor: pointer"
+      title="close side menu"
+      id="myOverlay"
+    ></div>
+
+    <!-- Main page content -->
+    <div class="ht-main" style="margin-left: 340px; margin-right: 40px">
+      <!-- Header section -->
+      <div class="ht-container" style="margin-top: 80px" id="showcase">
+        <h1 class="ht-jumbo"><b>[Showcase about quality of work]</b></h1>
+        <hr
+          style="width: 50px; border: 5px solid rgb(48, 66, 43)"
+          class="ht-round"
+        />
+      </div>
+
+      <!-- Photo grid section with modal functionality -->
+      <div class="ht-row-padding">
+        <div class="ht-half">
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="Concrete meets bricks"
+          />
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="Light, white and tight scandinavian design"
+          />
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="White walls with designer chairs"
+          />
+        </div>
+
+        <div class="ht-half">
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="Windows for the atrium"
+          />
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="Bedroom and office in one space"
+          />
+          <img
+            src="fekku.png"
+            style="width: 80%"
+            onclick="onClick(this)"
+            alt="Scandinavian design"
+          />
+        </div>
+      </div>
+
+      <!-- Modal for displaying full-size images -->
+      <div
+        id="modal01"
+        class="ht-modal ht-black"
+        style="padding-top: 0"
+        onclick="this.style.display='none'"
+      >
+        <span class="ht-button ht-black ht-xxlarge ht-display-topright">×</span>
+        <div
+          class="ht-modal-content ht-animate-zoom ht-center ht-transparent ht-padding-64"
+        >
+          <img id="img01" class="ht-image" />
+          <p id="caption"></p>
+        </div>
+      </div>
+
+      <!-- Call-to-Action Section -->
+      <div class="ht-container ht-padding-32" style="margin-top: 50px">
+        <h2>Lorem ipsum, dolor sit amet consectetur</h2>
+        <p>
+          [if interested or want to know more, you can ask more by clicking
+          button below] Lorem ipsum dolor sit, amet consectetur adipisicing
+          elit. Voluptatem corrupti, eius neque sit, mollitia quidem aspernatur
+          laboriosam pariatur doloremque quaerat et odio sapiente repudiandae
+          minima, enim officiis. Eum, velit non.
+        </p>
+        <a href="contact.html" class="ht-button ht-light-grey ht-large"
+          >Contact us!</a
+        >
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div
+      class="ht-light-grey ht-container ht-padding-32"
+      style="margin-top: 75px; padding-right: 58px"
+    >
+      <p class="ht-right">
+        Copyright © 2024 Company. Powered by
+        <a
+          href="https://www.company.com/htcss/default.css"
+          title="oula.css"
+          target="_blank"
+          class="ht-hover-opacity"
+          >oula.css</a
+        >
+      </p>
+    </div>
+
+    <script>
+      // Functionality for opening and closing the sidebar
+      function ht_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function ht_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal functionality for image gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+    </script>
+  </body>
+</html>
