@@ -14,3 +14,6 @@ Projekti on toteutettu osana Web-kehitys kurssia ja alla opettajan arvostelu siv
 
 ![arvio](assets/images/teacher-review.png)
 
+
+** Sivun kuvat on luotu OpenAi:n ChatGPT o1-minillä.
+
