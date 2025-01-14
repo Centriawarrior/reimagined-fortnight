@@ -12,5 +12,5 @@ Sivusto on suunniteltu responsiiviseksi ja käyttäjäystävälliseksi, tarjoten
 
 Projekti on toteutettu osana Web-kehitys kurssia ja alla opettajan arvostelu sivustosta:
 
-![arvio](images/teachers-review.png)
+![arvio](assets/images/teacher-review.png)
 
